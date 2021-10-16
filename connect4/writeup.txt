@@ -1,0 +1,24 @@
+At 100 rollouts, it wins 15, draws 4, loses 6.
+If playing second, it wins 18, draw 0, loses 7.
+At 250 rollouts, these improve to 18/3/4, and 21/2/2 when playing second.
+
+
+
+When UCB exploration constant is 0.01, its winning ratio (half first half second) is 54 - 16 - 30
+When UCB exploration constant is 0.125, its winning ratio (half first half second) is 66 - 16 - 18
+When UCB exploration constant is 0.25, its winning ratio (half first half second) is 68 - 14 - 18
+When UCB exploration constant is 1, its winning ratio (half first half second) is 70 - 15 - 15
+When UCB exploration constant is 2, its winning ratio (half first half second) is 80 - 12 - 8
+When UCB exploration constant is 8, its winning ratio (half first half second) is 67 - 18 - 15
+When UCB exploration constant is 100, its winning ratio (half first half second) is 59 - 10 - 31
+
+This makes sense; there should be a goldilocks zone, as too much exploration means not enough optimizing, and vice versa
+
+
+
+At 8 rollouts vs 64 rollouts, 46 - 26 - 28 (23 - 13 - 14 ratio for comparison)
+At 8 rollouts vs 512 rollouts, 31 - 14 - 5
+At 64 rollouts vs 512 rollouts, 17 - 26 - 7
+
+As expected, the player with more rollouts is consistently favored, and the more rollouts, the larger the gap.
+Also, it seems that two good players are more likely to tie with each other than two poor players.
